@@ -1,3 +1,5 @@
+
+
 Events Dashboard
 The Events Dashboard is a React application that allows users to view, join, and manage events. It utilizes the NextUI component library for a modern and responsive design and Lucide React for scalable vector icons. The application fetches event data from a backend API and provides functionalities such as joining and leaving events.
 
@@ -55,6 +57,10 @@ Get Past Events: GET http://localhost:4000/api/v1/event/get-past-event
 Join Event: POST http://localhost:4000/api/v1/event/join/{eventId}
 
 Leave Event: POST http://localhost:4000/api/v1/event/leave/{eventId}
+
+Credentials
+Id: test@gmail.com
+Password: Test@12345
 
 Contributing
 Fork the Repository: Click the "Fork" button at the top right of this page.
