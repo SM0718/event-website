@@ -32,7 +32,7 @@ const EventsDashboard = () => {
         user = await getCurrentUser();
         // console.log(user);
         if(user.statusCode !== 200) {
-          toast.success("Login To View Events, Redirecting...", {
+          toast.info("Login To View Events, Redirecting...", {
             position: "top-right",
             autoClose: 3000,
             theme: "dark",
