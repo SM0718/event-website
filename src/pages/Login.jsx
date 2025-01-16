@@ -40,7 +40,7 @@ function Login() {
     try {
       if (authMode === 'login') {
         // console.log('login');
-        const response = await fetch("http://localhost:4000/api/v1/users/login", {
+        const response = await fetch("https://event.up.railway.app/api/v1/users/login", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'  // Add this header
@@ -73,7 +73,7 @@ function Login() {
           }, 2000); // Match the `autoClose` duration
         }
       } else {
-        const response = await fetch("http://localhost:4000/api/v1/users/register", {
+        const response = await fetch("https://event.up.railway.app/api/v1/users/register", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'  // Add this header

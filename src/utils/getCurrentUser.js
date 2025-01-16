@@ -1,7 +1,7 @@
 export const getCurrentUser = async () => {
     const token = localStorage.getItem('accessToken');
     try {
-      const request = await fetch('http://localhost:4000/api/v1/users/current-user', {
+      const request = await fetch('https://event.up.railway.app/api/v1/users/current-user', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

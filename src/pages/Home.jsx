@@ -78,7 +78,7 @@ export const Header = () => {
   const logout = async () => {
     const token = localStorage.getItem('accessToken')
     try {
-      const request = await fetch(`http://localhost:4000/api/v1/users/logout`, {
+      const request = await fetch(`https://event.up.railway.app/api/v1/users/logout`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

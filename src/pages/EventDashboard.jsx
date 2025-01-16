@@ -27,11 +27,11 @@ const EventsDashboard = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const allEventsRequest = fetch('http://localhost:4000/api/v1/event/get-all-events', {
+      const allEventsRequest = fetch('https://event.up.railway.app/api/v1/event/get-all-events', {
         method: 'GET',
       });
 
-      const userEventsRequest = fetch(`http://localhost:4000/api/v1/event/get-all-event`, {
+      const userEventsRequest = fetch(`https://event.up.railway.app/api/v1/event/get-all-event`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ const EventsDashboard = () => {
         credentials: 'include',
       });
 
-      const userPastEvents = fetch(`http://localhost:4000/api/v1/event/get-past-event`, {
+      const userPastEvents = fetch(`https://event.up.railway.app/api/v1/event/get-past-event`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -100,7 +100,7 @@ const EventsDashboard = () => {
 
   const handleJoinEvent = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/event/join/${eventId}`, {
+      const response = await fetch(`https://event.up.railway.app/api/v1/event/join/${eventId}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -135,7 +135,7 @@ const EventsDashboard = () => {
 
   const handleLeaveEvent = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/v1/event/leave/${eventId}`, {
+      const response = await fetch(`https://event.up.railway.app/api/v1/event/leave/${eventId}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
