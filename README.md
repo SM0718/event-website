@@ -38,7 +38,6 @@ bash
 Copy
 Edit
 npm start
-The application will be running at http://localhost:3000.
 
 Usage
 Viewing Events: Upon loading, the dashboard displays a list of all upcoming events.
