@@ -15,6 +15,7 @@ import {
 import { Calendar, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { getCurrentUser } from '@/utils/getCurrentUser';
 
 const EventsDashboard = () => {
   const [events, setEvents] = useState([]);
@@ -24,6 +25,26 @@ const EventsDashboard = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const token = localStorage.getItem('accessToken');
+
+  useEffect(() => {
+      let user;
+      const getUser = async() => {
+        user = await getCurrentUser();
+        // console.log(user);
+        if(user.statusCode !== 200) {
+          toast.success("Login To View Events, Redirecting...", {
+            position: "top-right",
+            autoClose: 3000,
+            theme: "dark",
+          });
+          
+          setTimeout(() => {
+            navigate("/login");
+          }, 2000);
+        }
+      }
+      getUser();
+    }, []);
 
   useEffect(() => {
     const fetchEvents = async () => {

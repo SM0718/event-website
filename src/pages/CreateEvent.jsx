@@ -36,7 +36,7 @@ const CreateEvent = () => {
         });
         
         setTimeout(() => {
-          navigate("/");
+          navigate("/login");
         }, 2000);
       }
     }
