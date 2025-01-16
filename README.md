@@ -48,11 +48,14 @@ API Endpoints
 The application interacts with the following API endpoints:
 
 Get All Events: GET http://localhost:4000/api/v1/event/get-all-events
+
 Get User Events: GET http://localhost:4000/api/v1/event/get-all-event
+
 Get Past Events: GET http://localhost:4000/api/v1/event/get-past-event
+
 Join Event: POST http://localhost:4000/api/v1/event/join/{eventId}
+
 Leave Event: POST http://localhost:4000/api/v1/event/leave/{eventId}
-Ensure that the backend server is running and accessible at http://localhost:4000.
 
 Contributing
 Fork the Repository: Click the "Fork" button at the top right of this page.
